@@ -11,7 +11,7 @@ import java.util.*;
  *
  * @author Adarsh
  */
-/*class pairr<X , Y , Z>
+class pairr<X , Y , Z>
 {
     X _number;
     Y _frequency;
@@ -27,7 +27,7 @@ import java.util.*;
     void setFrequency(Y y){_frequency=y;}
     void setIndex(Z z){_index=z;}
 }
-*/
+
 public class SortElementByFrequency {
     
   
@@ -45,11 +45,11 @@ public class SortElementByFrequency {
             return a[0]-b[0];
         }
        });
-       /*for(int i=0;i<map.length;i++)
+       for(int i=0;i<map.length;i++)
        {
            System.out.println(map[i][0]+"   "+ map[i][1]);
        }
-       */
+       
        System.out.println("");
        int num=map[1][0];
        //Count number of distinct numbers
@@ -62,7 +62,7 @@ public class SortElementByFrequency {
                num=map[i][0];
            }
        }
-        //System.out.println(count);
+        System.out.println(count);
        // Mapping 1-Index and 0-count
        int map2[][]=new int[count][2]; 
        map2[0][1]=map[0][1];
@@ -82,19 +82,23 @@ public class SortElementByFrequency {
                map2[j][0]++;
        }
        
-       /*  
+       System.out.println("before sort"); 
        for(int i=0;i<map2.length;i++)
        {
            System.out.println(map2[i][0]+"   "+ map2[i][1]);
        }
-       */
+       
        Arrays.sort(map2 , new Comparator<int[]>(){
         public int compare(int []a , int []b){
             if(a[0]==b[0]) {return (a[1]-b[1]);}
             else return -(a[0]-b[0]);
         }
        });
-       
+       System.out.println("after sort");
+       for(int i=0;i<map2.length;i++)
+       {
+           System.out.println(map2[i][0]+"   "+ map2[i][1]);
+       }
        for(int i=0;i<map2.length;i++)
        {
            for(j=0;j<map2[i][0];j++)System.out.print(a[map2[i][1]]+ "  ");
@@ -102,7 +106,7 @@ public class SortElementByFrequency {
             return a;
     }
     
-  /*  public static void sortArraysByFreqUsingPriorityQueue(int a[])
+    public static void sortArraysByFreqUsingPriorityQueue(int a[])
     {
         PriorityQueue <pairr<Integer,Integer,Integer>> pq = new PriorityQueue<pairr<Integer,Integer,Integer>>(1,
         new Comparator<pairr<Integer,Integer,Integer>>()
@@ -120,10 +124,10 @@ public class SortElementByFrequency {
             
         }
     }
-    */
+   
     public static void main(String []args)
     {
-        int a[]={5 ,2 ,2 ,8, 5,  6 , 8 , 8};
-        sortArrayByFrequency(a);
+        int a[]={5 ,2 ,2 ,8, 5,  6 , 5 , 8};
+        sortArraysByFreqUsingPriorityQueue(a);
     }
 }

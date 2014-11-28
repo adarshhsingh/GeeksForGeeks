@@ -7,7 +7,7 @@ public class mergeArrays {
 		
 		int a[]={1,3,6};
 		int b[]={2,4,5};
-		int c[]={1,3,2};
+		int c[]={1,2,2};
 		int x[]=mergeArrays(a,b);
 		for (int i = 0; i < x.length; i++) {
 			System.out.println(x[i]);

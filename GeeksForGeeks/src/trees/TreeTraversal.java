@@ -10,30 +10,7 @@ package trees;
  *
  * @author Adarsh
  */
-/*
- * Make a node.java in the package - for all tree programs to access it.
- *
-class node {
-	int data;
-	node left;
-	node right;
 
-	node() {
-		this.data = -1;
-		this.left = null;
-		this.right = null;
-
-	}
-
-	node(int data) {
-		this.data = data;
-		this.left = null;
-		this.right = null;
-	}
-
-}
-
- */
 public class TreeTraversal {
 
 	// Inorder Traversal

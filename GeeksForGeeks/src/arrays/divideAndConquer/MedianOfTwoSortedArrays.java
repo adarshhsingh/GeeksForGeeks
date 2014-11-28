@@ -130,7 +130,7 @@ public class MedianOfTwoSortedArrays {
     
     public static void main(String args[])
     {
-        int ar1[] = {1};
+        int ar1[] = {1,2};
         int ar2[] = {3};
         System.out.println(getMeadianByMergeAndCount(ar1, ar2, ar1.length));
         System.out.println(getMedianByComparingMedianOfTwoArrays(ar1, 0, ar1.length-1, ar2, 0 , ar2.length-1));
